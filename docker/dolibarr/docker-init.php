@@ -36,7 +36,7 @@ activateModulesRequiredByCountry('FR');
 
 if (!empty(getenv('COMPANY_NAME'))) {
         $compname = getenv('COMPANY_NAME');
-        dolibarr_set_const($db, "MAIN_INFO_SOCIETE_NOM", "Wouafwouf", 'chaine', 0, '', $conf->entity);
+        dolibarr_set_const($db, "MAIN_INFO_SOCIETE_NOM", "XXXXXXXXX", 'chaine', 0, '', $conf->entity);
 }
 
 $db->commit();
