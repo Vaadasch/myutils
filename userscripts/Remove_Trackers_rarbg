@@ -1,0 +1,29 @@
+// ==UserScript==
+// @name         Remove_Trackers
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://rarbgaccessed.org/torrent/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
+// @grant        GM_setClipboard
+// ==/UserScript==
+
+function coincoin() {
+    GM_setClipboard ($('[href^="magnet"]')[0].href);
+}
+
+(function() {
+    'use strict';
+
+    let magnet = $('[href^="magnet"]')[0]
+    magnet.href = magnet.href.substr(0,magnet.href.indexOf('&tr'))
+
+    var button = $('<button/>', {
+        text: 'Copy Magnet',
+        click: coincoin
+    });
+
+    $('[href^="magnet"]')[0].parentElement.append(button[0]);
+
+})();
