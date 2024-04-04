@@ -4,6 +4,10 @@ apt-get update -yqq
 apt-get upgrade -yqq
 apt-get install -yqq vim
 
+cp /home/debian/.bashrc ~/.bashrc
+sed -i 's#;32m#;33m#g' ~/.bashrc
+. ~/.bashrc
+
 VIMVERS=$(ls /usr/share/vim | grep -i vim)
 if [ ! -f /usr/share/vim/$VIMVERS/colors/mycolors.vim ] ; then
     wget -qO /usr/share/vim/$VIMVERS/colors/mycolors.vim https://raw.githubusercontent.com/Vaadasch/myutils/main/vimconfig/mycolors.vim
