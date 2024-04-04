@@ -6,6 +6,5 @@ Activate the colors in `/etc/vim/vimrc` or `~/.vimrc` by adding `colorscheme myc
 
 ```
 wget -O /usr/share/vim/vim90/colors/mycolors.vim https://raw.githubusercontent.com/Vaadasch/myutils/main/vimconfig/mycolors.vim
-https://raw.githubusercontent.com/Vaadasch/myutils/main/vimconfig/mycolors.vim
 wget -O ~/.vimrc https://raw.githubusercontent.com/Vaadasch/myutils/main/vimconfig/.vimrc
 ``` 
