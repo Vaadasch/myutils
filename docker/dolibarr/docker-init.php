@@ -32,6 +32,7 @@ if (!empty(getenv('DOLI_ENABLE_MODULES'))) {
 require_once DOL_DOCUMENT_ROOT.'/core/lib/company.lib.php';
 $s = '1:FR:France';
 dolibarr_set_const($db, "MAIN_INFO_SOCIETE_COUNTRY", $s, 'chaine', 0, '', $conf->entity);
+$db->commit();
 activateModulesRequiredByCountry('FR');
 
 if (!empty(getenv('COMPANY_NAME'))) {
